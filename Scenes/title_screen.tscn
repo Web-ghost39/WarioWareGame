@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dfay3u0s7fu56"]
+
+[ext_resource type="Texture2D" uid="uid://bf8dci810tt4o" path="res://Menu background.png" id="1_klylv"]
+[ext_resource type="Script" uid="uid://ddx6i81lproxf" path="res://Scenes/title_screen.gd" id="1_p3fck"]
+
+[node name="TitleScreen" type="Node2D" unique_id=47810280]
+script = ExtResource("1_p3fck")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1913116496]
+offset_left = -1.0
+offset_top = 5.0
+offset_right = 1150.0
+offset_bottom = 654.0
+texture = ExtResource("1_klylv")
+expand_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=412904409]
+clip_contents = false
+offset_left = 202.0
+offset_top = 60.0
+offset_right = 1139.0
+offset_bottom = 216.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "Restaurant Panic!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1414067902]
+offset_left = 544.0
+offset_top = 217.0
+offset_right = 1012.0
+offset_bottom = 383.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1943673608]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=485302445]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=737658849]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
