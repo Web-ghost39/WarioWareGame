@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bsuq4in6355yq"]
+
+[ext_resource type="Script" uid="uid://difxd3kmrdkcx" path="res://Scenes/timer_screen.gd" id="1_c7xwe"]
+[ext_resource type="Texture2D" uid="uid://rg71vnv7lgjc" path="res://Level scene.png" id="1_rol8n"]
+[ext_resource type="Texture2D" uid="uid://dp2oq0qx6if8s" path="res://Lives.png" id="2_cn3xy"]
+
+[node name="TimerScreen" type="Node2D" unique_id=1647178365]
+script = ExtResource("1_c7xwe")
+
+[node name="Level background" type="TextureRect" parent="." unique_id=872457254]
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 1151.0
+offset_bottom = 647.0
+texture = ExtResource("1_rol8n")
+expand_mode = 2
+
+[node name="Lifecontainer" type="HBoxContainer" parent="." unique_id=539735365]
+offset_left = 457.0
+offset_top = 76.0
+offset_right = 1124.0
+offset_bottom = 173.0
+
+[node name="Life" type="TextureRect" parent="Lifecontainer" unique_id=1478439293]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+expand_mode = 3
+
+[node name="Life2" type="TextureRect" parent="Lifecontainer" unique_id=1212849668]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+expand_mode = 3
+
+[node name="Life3" type="TextureRect" parent="Lifecontainer" unique_id=988031450]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+expand_mode = 3
+
+[node name="Life4" type="TextureRect" parent="Lifecontainer" unique_id=625797838]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+expand_mode = 3
+
+[node name="Life5" type="TextureRect" parent="Lifecontainer" unique_id=1064398964]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+expand_mode = 3
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=1902454598]
+offset_left = 688.0
+offset_top = 244.0
+offset_right = 862.0
+offset_bottom = 311.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "Level #"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=840944228]
+offset_left = 724.0
+offset_top = 359.0
+offset_right = 814.0
+offset_bottom = 426.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"
