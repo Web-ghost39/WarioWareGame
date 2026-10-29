@@ -1,0 +1,228 @@
+[gd_scene format=3 uid="uid://fugnirl8i5tv"]
+
+[ext_resource type="Script" uid="uid://c2jml7ii5vwku" path="res://node_2d.gd" id="1_5txvl"]
+[ext_resource type="Texture2D" uid="uid://bcc7jvf8gfmt8" path="res://Scrolling background.png" id="1_enoba"]
+[ext_resource type="PackedScene" uid="uid://caiavn0ubn4ku" path="res://Scenes/player.tscn" id="2_11mgy"]
+[ext_resource type="Texture2D" uid="uid://dmqmqj0wfwv0v" path="res://Burger.png" id="3_f6tb2"]
+[ext_resource type="Script" uid="uid://b4kxf5o3k5pu1" path="res://Scenes/burger.gd" id="3_o6yob"]
+[ext_resource type="PackedScene" uid="uid://u7odvmwk5rmq" path="res://Scenes/theme_t.tscn" id="6_0uv5o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yy6hl"]
+size = Vector2(1148, 65.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtlxm"]
+size = Vector2(368, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wlkn"]
+size = Vector2(297, 58.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2o5ov"]
+size = Vector2(231.5, 38.5)
+
+[sub_resource type="Animation" id="Animation_f6tb2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Burger/Burger:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(867, 493)]
+}
+
+[sub_resource type="Animation" id="Animation_o6yob"]
+resource_name = "floating"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Burger/Burger:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(867, 493), Vector2(866, 483)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5txvl"]
+_data = {
+&"RESET": SubResource("Animation_f6tb2"),
+&"floating": SubResource("Animation_o6yob")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yy6hl"]
+radius = 72.02777
+
+[node name="minigame_1" type="Node2D" unique_id=1759918714]
+script = ExtResource("1_5txvl")
+
+[node name="Scrollingbackground" type="Parallax2D" parent="." unique_id=1901337223]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="Scrollingbackground" unique_id=1448603177]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1010.0
+offset_bottom = 648.0
+texture = ExtResource("1_enoba")
+expand_mode = 1
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=1505980973]
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=399480179]
+offset_left = 1.0
+offset_top = 580.0
+offset_right = 1155.0
+offset_bottom = 648.0
+color = Color(0.3026517, 0.08952231, 0.021608457, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1734936249]
+position = Vector2(577, 612.8125)
+shape = SubResource("RectangleShape2D_yy6hl")
+
+[node name="Player" parent="." unique_id=212681428 instance=ExtResource("2_11mgy")]
+position = Vector2(556, 97)
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=440923549]
+
+[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=1945515668]
+offset_left = 495.0
+offset_top = 460.0
+offset_right = 867.0
+offset_bottom = 520.0
+color = Color(0.6861626, 0.39346913, 0.198968, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=104688171]
+position = Vector2(679, 490)
+shape = SubResource("RectangleShape2D_vtlxm")
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=57259815]
+
+[node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=1341716028]
+offset_left = 314.0
+offset_top = 336.0
+offset_right = 612.0
+offset_bottom = 398.0
+color = Color(0.6861626, 0.39346913, 0.198968, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=1189654628]
+position = Vector2(464, 367.25)
+shape = SubResource("RectangleShape2D_6wlkn")
+
+[node name="Platform4" type="StaticBody2D" parent="." unique_id=1606641825]
+
+[node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=1696623423]
+offset_left = 53.0
+offset_top = 244.0
+offset_right = 286.0
+offset_bottom = 283.0
+color = Color(0.6861626, 0.39346913, 0.198968, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=801889376]
+position = Vector2(169, 262)
+shape = SubResource("RectangleShape2D_2o5ov")
+
+[node name="Burger" type="Node2D" parent="." unique_id=673726654]
+script = ExtResource("3_o6yob")
+
+[node name="Burger" type="TextureRect" parent="Burger" unique_id=373731123]
+offset_left = 867.0
+offset_top = 493.0
+offset_right = 1024.0
+offset_bottom = 596.00037
+texture = ExtResource("3_f6tb2")
+expand_mode = 1
+
+[node name="animation" type="AnimationPlayer" parent="Burger" unique_id=1749567350]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_5txvl")
+
+[node name="Area2D" type="Area2D" parent="Burger" unique_id=310231092]
+position = Vector2(930, 544)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Burger/Area2D" unique_id=362350493]
+position = Vector2(11, 4)
+shape = SubResource("CircleShape2D_yy6hl")
+
+[node name="Burger2" type="Node2D" parent="." unique_id=1572422128]
+position = Vector2(-258, -136)
+script = ExtResource("3_o6yob")
+
+[node name="Burger" type="TextureRect" parent="Burger2" unique_id=555565371]
+offset_left = 867.0
+offset_top = 493.0
+offset_right = 1024.0
+offset_bottom = 596.00037
+texture = ExtResource("3_f6tb2")
+expand_mode = 1
+
+[node name="animation" type="AnimationPlayer" parent="Burger2" unique_id=323846987]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_5txvl")
+
+[node name="Area2D" type="Area2D" parent="Burger2" unique_id=724481826]
+position = Vector2(930, 544)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Burger2/Area2D" unique_id=1202418145]
+position = Vector2(11, 4)
+shape = SubResource("CircleShape2D_yy6hl")
+
+[node name="Burger3" type="Node2D" parent="." unique_id=2126049517]
+position = Vector2(-464, -249)
+script = ExtResource("3_o6yob")
+
+[node name="Burger" type="TextureRect" parent="Burger3" unique_id=2002438943]
+offset_left = 867.0
+offset_top = 493.0
+offset_right = 1024.0
+offset_bottom = 596.00037
+texture = ExtResource("3_f6tb2")
+expand_mode = 1
+
+[node name="animation" type="AnimationPlayer" parent="Burger3" unique_id=1267864021]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_5txvl")
+
+[node name="Area2D" type="Area2D" parent="Burger3" unique_id=211318049]
+position = Vector2(930, 544)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Burger3/Area2D" unique_id=1065963775]
+position = Vector2(11, 4)
+shape = SubResource("CircleShape2D_yy6hl")
+
+[node name="Burger4" type="Node2D" parent="." unique_id=1257374644]
+position = Vector2(-792, -397)
+script = ExtResource("3_o6yob")
+
+[node name="Burger" type="TextureRect" parent="Burger4" unique_id=1508311000]
+offset_left = 867.0
+offset_top = 493.0
+offset_right = 1024.0
+offset_bottom = 596.00037
+texture = ExtResource("3_f6tb2")
+expand_mode = 1
+
+[node name="animation" type="AnimationPlayer" parent="Burger4" unique_id=1138403838]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_5txvl")
+
+[node name="Area2D" type="Area2D" parent="Burger4" unique_id=29590273]
+position = Vector2(930, 544)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Burger4/Area2D" unique_id=551118296]
+position = Vector2(11, 4)
+shape = SubResource("CircleShape2D_yy6hl")
+
+[node name="ThemedTimer" parent="." unique_id=2018663750 instance=ExtResource("6_0uv5o")]
+
+[connection signal="burger_collected" from="Burger" to="." method="burger_collect"]
+[connection signal="burger_collected" from="Burger2" to="." method="burger_collect"]
+[connection signal="burger_collected" from="Burger3" to="." method="burger_collect"]
+[connection signal="burger_collected" from="Burger4" to="." method="burger_collect"]

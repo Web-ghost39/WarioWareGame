@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://u7odvmwk5rmq"]
 
-[ext_resource type="Script" uid="uid://c2jml7ii5vwku" path="res://node_2d.gd" id="1_ivo56"]
+[ext_resource type="Script" uid="uid://cw770ivnqsd16" path="res://Scenes/theme_t.gd" id="1_ivo56"]
 
-[node name="themeT" type="Node2D" unique_id=2018663750]
+[node name="ThemedTimer" type="Node2D" unique_id=2018663750]
 script = ExtResource("1_ivo56")
 
 [node name="timer" type="RichTextLabel" parent="." unique_id=72284992]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 288.0
+offset_top = 160.0
+offset_right = 466.0
+offset_bottom = 236.0
+theme_override_font_sizes/normal_font_size = 42
