@@ -9,7 +9,7 @@ extends Node2D
 @onready var timer: RichTextLabel = $Timer
 
 var time 
-
+var current_level= Global.minigames_done + 1
 func _ready() -> void:
 	await Timer(5.0)
 	
@@ -40,7 +40,7 @@ func _process(delta: float) -> void:
 		0:
 			life_container.hide()
 	timer.text = str(time)
-	level.text= "Level " + str(Global.minigames_done)
+	level.text= "Level " + str(current_level) 
 func Timer(start_time: float):
 	time= start_time
 	while time > 0.0:
@@ -49,4 +49,4 @@ func Timer(start_time: float):
 	return
 
 func wait(seconds: float) -> void:
-	await get_tree(). create_timer(seconds).timeout
+	await get_tree().create_timer(seconds).timeout

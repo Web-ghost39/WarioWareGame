@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b5hbk2xgnsxkd"]
+
+[ext_resource type="Script" uid="uid://bxk3eunha77n" path="res://Scenes/done_screen.gd" id="1_3rr80"]
+[ext_resource type="Texture2D" uid="uid://dvwedki26ntff" path="res://Winner.png" id="1_en6tx"]
+
+[node name="done_screen" type="Node2D" unique_id=478177412]
+script = ExtResource("1_3rr80")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1387408871]
+offset_right = 1151.0
+offset_bottom = 649.0
+texture = ExtResource("1_en6tx")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=797916163]
+clip_contents = false
+offset_left = 385.0
+offset_top = 5.0
+offset_right = 660.0
+offset_bottom = 96.0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 66
+text = "You win!"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=215576172]
+clip_contents = false
+offset_left = 311.0
+offset_top = 98.0
+offset_right = 760.0
+offset_bottom = 175.0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 27
+text = "The manager seems proud of you!"
+
+[node name="Button" type="Button" parent="." unique_id=1834756632]
+offset_left = 904.0
+offset_top = 11.0
+offset_right = 1103.0
+offset_bottom = 52.0
+text = "Back to title screen"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

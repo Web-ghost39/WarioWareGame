@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b3jh36h7wlx0f"]
+
+[ext_resource type="Script" uid="uid://icf247hrsoks" path="res://Scenes/lose_screen.gd" id="1_488pv"]
+[ext_resource type="Texture2D" uid="uid://b7ib4qixd1ht8" path="res://Loser.png" id="1_s2rrh"]
+
+[node name="lose_screen" type="Node2D" unique_id=1410107680]
+script = ExtResource("1_488pv")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1441651491]
+offset_right = 1155.0
+offset_bottom = 650.0
+texture = ExtResource("1_s2rrh")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1965738871]
+clip_contents = false
+offset_left = 816.0
+offset_top = 339.0
+offset_right = 1135.0
+offset_bottom = 475.0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 70
+text = "You lose!"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1338137468]
+clip_contents = false
+offset_left = 717.0
+offset_top = 428.0
+offset_right = 1196.0
+offset_bottom = 487.0
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/normal_font_size = 23
+text = "The manager doesn't seem too happy.."
+
+[node name="Button" type="Button" parent="." unique_id=88294025]
+offset_left = 873.0
+offset_top = 473.0
+offset_right = 1063.0
+offset_bottom = 521.0
+text = "Back to title screen"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

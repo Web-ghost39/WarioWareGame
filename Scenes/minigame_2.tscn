@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bx2mxsrpapcsj"]
+
+[ext_resource type="Texture2D" uid="uid://bcc7jvf8gfmt8" path="res://Scrolling background.png" id="1_psbsm"]
+[ext_resource type="Script" uid="uid://c6rt0lo4tk8c5" path="res://Scenes/minigame_2.gd" id="1_rfxq2"]
+[ext_resource type="Texture2D" uid="uid://d0vnx50yjancq" path="res://Cheque.png" id="2_dfb65"]
+[ext_resource type="Script" uid="uid://ue74ey4khpf8" path="res://Scenes/button_1.gd" id="3_rfxq2"]
+[ext_resource type="PackedScene" uid="uid://u7odvmwk5rmq" path="res://Scenes/theme_t.tscn" id="4_mmgun"]
+
+[node name="minigame_2" type="Node2D" unique_id=1323520552]
+script = ExtResource("1_rfxq2")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1940069487]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1150.0
+offset_bottom = 654.0
+texture = ExtResource("1_psbsm")
+expand_mode = 1
+
+[node name="Button_1" type="TextureButton" parent="." unique_id=658025128]
+offset_left = 385.0
+offset_top = 306.0
+offset_right = 585.0
+offset_bottom = 439.0
+texture_normal = ExtResource("2_dfb65")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_rfxq2")
+
+[node name="Button_2" type="TextureButton" parent="." unique_id=1381124795]
+offset_left = 36.0
+offset_top = 111.0
+offset_right = 236.0
+offset_bottom = 244.0
+texture_normal = ExtResource("2_dfb65")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_rfxq2")
+
+[node name="Button_3" type="TextureButton" parent="." unique_id=1633006922]
+offset_left = 674.0
+offset_top = 481.0
+offset_right = 874.0
+offset_bottom = 614.0
+texture_normal = ExtResource("2_dfb65")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_rfxq2")
+
+[node name="Button_4" type="TextureButton" parent="." unique_id=1828178250]
+offset_left = 875.0
+offset_top = 128.0
+offset_right = 1075.0
+offset_bottom = 261.0
+texture_normal = ExtResource("2_dfb65")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_rfxq2")
+
+[node name="ThemedTimer" parent="." unique_id=2018663750 instance=ExtResource("4_mmgun")]
+
+[connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
+[connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
+[connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
+[connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]
