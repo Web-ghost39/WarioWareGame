@@ -19,46 +19,156 @@ size = Vector2(297, 58.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2o5ov"]
 size = Vector2(231.5, 38.5)
 
-[sub_resource type="Animation" id="Animation_f6tb2"]
-length = 1.0333333
-loop_mode = 2
+[sub_resource type="Animation" id="Animation_0uv5o"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Burger/Burger:position")
-tracks/0/interp = 2
+tracks/0/path = NodePath("Burger:position")
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 1.0333333),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(852, 486), Vector2(852, 462), Vector2(852, 461.975)]
+"values": [Vector2(852, 486)]
 }
 
-[sub_resource type="Animation" id="Animation_o6yob"]
-resource_name = "floating"
+[sub_resource type="Animation" id="Animation_ojqsy"]
+resource_name = "floating1"
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Burger/Burger:position")
+tracks/0/path = NodePath("Burger:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(867, 493), Vector2(866, 483)]
+"values": [Vector2(852, 486), Vector2(852, 476)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5txvl"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jmcek"]
 _data = {
-&"RESET": SubResource("Animation_f6tb2"),
-&"floating": SubResource("Animation_o6yob")
+&"RESET": SubResource("Animation_0uv5o"),
+&"floating1": SubResource("Animation_ojqsy")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yy6hl"]
 radius = 72.02777
+
+[sub_resource type="Animation" id="Animation_ne1wf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Burger:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(867, 477)]
+}
+
+[sub_resource type="Animation" id="Animation_qytqt"]
+resource_name = "floating2"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Burger:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(867, 477), Vector2(867, 467)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vj06g"]
+_data = {
+&"RESET": SubResource("Animation_ne1wf"),
+&"floating2": SubResource("Animation_qytqt")
+}
+
+[sub_resource type="Animation" id="Animation_jmcek"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Burger:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(867, 493)]
+}
+
+[sub_resource type="Animation" id="Animation_vj06g"]
+resource_name = "floating3"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Burger:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(867, 493), Vector2(867, 483)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o14ck"]
+_data = {
+&"RESET": SubResource("Animation_jmcek"),
+&"floating3": SubResource("Animation_vj06g")
+}
+
+[sub_resource type="Animation" id="Animation_o14ck"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Burger:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(867, 493)]
+}
+
+[sub_resource type="Animation" id="Animation_btwg3"]
+resource_name = "floating4"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Burger:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(867, 493), Vector2(867, 483)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3yb6h"]
+_data = {
+&"RESET": SubResource("Animation_o14ck"),
+&"floating4": SubResource("Animation_btwg3")
+}
 
 [node name="minigame_1" type="Node2D" unique_id=1759918714]
 script = ExtResource("1_0uv5o")
@@ -137,13 +247,13 @@ script = ExtResource("3_o6yob")
 offset_left = 852.0
 offset_top = 486.0
 offset_right = 1009.0
-offset_bottom = 588.9977
+offset_bottom = 588.995
 texture = ExtResource("3_f6tb2")
 expand_mode = 1
 
-[node name="animation" type="AnimationPlayer" parent="Burger" unique_id=1749567350]
-root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_5txvl")
+[node name="floating1" type="AnimationPlayer" parent="Burger" unique_id=637989913]
+libraries/ = SubResource("AnimationLibrary_jmcek")
+autoplay = &"floating1"
 
 [node name="Area2D" type="Area2D" parent="Burger" unique_id=310231092]
 position = Vector2(930, 544)
@@ -153,7 +263,7 @@ position = Vector2(-3, -20)
 shape = SubResource("CircleShape2D_yy6hl")
 
 [node name="Burger2" type="Node2D" parent="." unique_id=1572422128]
-position = Vector2(-258, -136)
+position = Vector2(-258, -113)
 script = ExtResource("3_o6yob")
 
 [node name="Burger" type="TextureRect" parent="Burger2" unique_id=555565371]
@@ -164,9 +274,9 @@ offset_bottom = 580.00037
 texture = ExtResource("3_f6tb2")
 expand_mode = 1
 
-[node name="animation" type="AnimationPlayer" parent="Burger2" unique_id=323846987]
-root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_5txvl")
+[node name="floating2" type="AnimationPlayer" parent="Burger2" unique_id=1262655132]
+libraries/ = SubResource("AnimationLibrary_vj06g")
+autoplay = &"floating2"
 
 [node name="Area2D" type="Area2D" parent="Burger2" unique_id=724481826]
 position = Vector2(930, 544)
@@ -187,9 +297,9 @@ offset_bottom = 596.00037
 texture = ExtResource("3_f6tb2")
 expand_mode = 1
 
-[node name="animation" type="AnimationPlayer" parent="Burger3" unique_id=1267864021]
-root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_5txvl")
+[node name="floating3" type="AnimationPlayer" parent="Burger3" unique_id=1545819004]
+libraries/ = SubResource("AnimationLibrary_o14ck")
+autoplay = &"floating3"
 
 [node name="Area2D" type="Area2D" parent="Burger3" unique_id=211318049]
 position = Vector2(930, 544)
@@ -199,7 +309,7 @@ position = Vector2(11, 4)
 shape = SubResource("CircleShape2D_yy6hl")
 
 [node name="Burger4" type="Node2D" parent="." unique_id=1257374644]
-position = Vector2(-792, -397)
+position = Vector2(-792, -348)
 script = ExtResource("3_o6yob")
 
 [node name="Burger" type="TextureRect" parent="Burger4" unique_id=1508311000]
@@ -210,9 +320,9 @@ offset_bottom = 596.00037
 texture = ExtResource("3_f6tb2")
 expand_mode = 1
 
-[node name="animation" type="AnimationPlayer" parent="Burger4" unique_id=1138403838]
-root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_5txvl")
+[node name="floating4" type="AnimationPlayer" parent="Burger4" unique_id=1248707171]
+libraries/ = SubResource("AnimationLibrary_3yb6h")
+autoplay = &"floating4"
 
 [node name="Area2D" type="Area2D" parent="Burger4" unique_id=29590273]
 position = Vector2(930, 544)
