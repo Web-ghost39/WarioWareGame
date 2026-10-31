@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://icf247hrsoks" path="res://Scenes/lose_screen.gd" id="1_488pv"]
 [ext_resource type="Texture2D" uid="uid://b7ib4qixd1ht8" path="res://Loser.png" id="1_s2rrh"]
+[ext_resource type="AudioStream" uid="uid://dtf1w8wuhkon" path="res://Womp Edit 1 Export 1.mp3" id="3_go37l"]
 
 [node name="lose_screen" type="Node2D" unique_id=1410107680]
 script = ExtResource("1_488pv")
@@ -38,5 +39,9 @@ offset_top = 473.0
 offset_right = 1063.0
 offset_bottom = 521.0
 text = "Back to title screen"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1573330035]
+stream = ExtResource("3_go37l")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

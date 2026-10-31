@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bk4g13xtiog4m"
+path="res://.godot/imported/Yippee Edit 1 Export 1.mp3-24803a39c831b5d50249c5c98fbcdd26.mp3str"
+
+[deps]
+
+source_file="res://Yippee Edit 1 Export 1.mp3"
+dest_files=["res://.godot/imported/Yippee Edit 1 Export 1.mp3-24803a39c831b5d50249c5c98fbcdd26.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

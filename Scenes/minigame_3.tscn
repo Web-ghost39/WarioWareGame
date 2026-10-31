@@ -1,0 +1,233 @@
+[gd_scene format=3 uid="uid://cakk7nq31ymc2"]
+
+[ext_resource type="Texture2D" uid="uid://bcc7jvf8gfmt8" path="res://Scrolling background.png" id="1_ihkhm"]
+[ext_resource type="Script" uid="uid://duxnwnv6b7qog" path="res://Scenes/minigame_3.gd" id="1_s0j2t"]
+[ext_resource type="Texture2D" uid="uid://srud21qjkeks" path="res://Customer.png" id="3_5plo5"]
+[ext_resource type="Texture2D" uid="uid://n7qa647tw608" path="res://Pizza.png" id="3_6sdpr"]
+[ext_resource type="Script" uid="uid://b6axmq1j3gqd" path="res://Scenes/burgerbutton.gd" id="3_lr4ld"]
+[ext_resource type="Texture2D" uid="uid://cu16jh4ljbyj7" path="res://BurgerArrow.png" id="3_s0j2t"]
+[ext_resource type="Texture2D" uid="uid://cxsv35ckkx70q" path="res://Sghetti.png" id="4_6sdpr"]
+[ext_resource type="Texture2D" uid="uid://dqnadtchgmr7r" path="res://Soup.png" id="5_lr4ld"]
+[ext_resource type="Script" uid="uid://qgcrte2l6623" path="res://Scenes/pizzabutton.gd" id="5_rpf30"]
+[ext_resource type="Script" uid="uid://4vuw6cyt6lhw" path="res://Scenes/sghettibutton.gd" id="7_y6mal"]
+[ext_resource type="Script" uid="uid://dqxie4kfevtdu" path="res://Scenes/soupbutton.gd" id="9_4cfv6"]
+[ext_resource type="PackedScene" uid="uid://u7odvmwk5rmq" path="res://Scenes/theme_t.tscn" id="11_5plo5"]
+
+[sub_resource type="Animation" id="Animation_5plo5"]
+resource_name = "Burgermation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(53, 190), Vector2(53, 181)]
+}
+
+[sub_resource type="Animation" id="Animation_1kvof"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(53, 190)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7u6rh"]
+_data = {
+&"Burgermation": SubResource("Animation_5plo5"),
+&"RESET": SubResource("Animation_1kvof")
+}
+
+[sub_resource type="Animation" id="Animation_75k32"]
+resource_name = "Pizzamation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(264, 181), Vector2(264, 172)]
+}
+
+[sub_resource type="Animation" id="Animation_f07lr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(264, 181)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kvuqf"]
+_data = {
+&"Pizzamation": SubResource("Animation_75k32"),
+&"RESET": SubResource("Animation_f07lr")
+}
+
+[sub_resource type="Animation" id="Animation_o2tgi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(454, 187)]
+}
+
+[sub_resource type="Animation" id="Animation_fsk5v"]
+resource_name = "Sghettimation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(454, 187), Vector2(454, 178)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b8c48"]
+_data = {
+&"RESET": SubResource("Animation_o2tgi"),
+&"Sghettimation": SubResource("Animation_fsk5v")
+}
+
+[sub_resource type="Animation" id="Animation_rneht"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(538, 99)]
+}
+
+[sub_resource type="Animation" id="Animation_un4qg"]
+resource_name = "Soupmation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(538, 99), Vector2(538, 90)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lgqf1"]
+_data = {
+&"RESET": SubResource("Animation_rneht"),
+&"Soupmation": SubResource("Animation_un4qg")
+}
+
+[node name="minigame_3" type="Node2D" unique_id=687309241]
+script = ExtResource("1_s0j2t")
+
+[node name="Background" type="TextureRect" parent="." unique_id=617341071]
+offset_right = 1152.0
+offset_bottom = 651.0
+texture = ExtResource("1_ihkhm")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1156595687]
+offset_right = 1151.0
+offset_bottom = 650.0
+texture = ExtResource("3_5plo5")
+expand_mode = 1
+
+[node name="Burger" type="TextureButton" parent="." unique_id=1440689643]
+offset_left = 53.0
+offset_top = 190.0
+offset_right = 267.0
+offset_bottom = 344.99927
+button_mask = 0
+texture_normal = ExtResource("3_s0j2t")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_lr4ld")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Burger" unique_id=285224803]
+libraries/ = SubResource("AnimationLibrary_7u6rh")
+
+[node name="Pizza" type="TextureButton" parent="." unique_id=2083664255]
+offset_left = 264.0
+offset_top = 181.0
+offset_right = 444.0
+offset_bottom = 338.0003
+button_mask = 0
+texture_normal = ExtResource("3_6sdpr")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("5_rpf30")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pizza" unique_id=242728856]
+libraries/ = SubResource("AnimationLibrary_kvuqf")
+
+[node name="Sghetti" type="TextureButton" parent="." unique_id=1529488491]
+offset_left = 454.0
+offset_top = 187.0
+offset_right = 667.0
+offset_bottom = 338.0
+texture_normal = ExtResource("4_6sdpr")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("7_y6mal")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sghetti" unique_id=849204859]
+libraries/ = SubResource("AnimationLibrary_b8c48")
+
+[node name="Soup" type="TextureButton" parent="." unique_id=318604963]
+offset_left = 538.0
+offset_top = 99.0
+offset_right = 965.0
+offset_bottom = 465.0
+texture_normal = ExtResource("5_lr4ld")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("9_4cfv6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Soup" unique_id=648891985]
+libraries/ = SubResource("AnimationLibrary_lgqf1")
+
+[node name="ThemedTimer" parent="." unique_id=2018663750 instance=ExtResource("11_5plo5")]
